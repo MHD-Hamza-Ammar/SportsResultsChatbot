@@ -8,6 +8,19 @@ intents:
   - mood_great
   - mood_unhappy
   - bot_challenge
+  - teams_playing
+  - current_score
+  - goal_scorers
+  - match_location
+  - match_date
+  - match_time
+  - first_half_goals
+  - second_half_goals
+  - yellow_cards
+  - red_cards
+
+entities:
+  - sport_type
 
 responses:
   utter_greet:
@@ -28,6 +41,38 @@ responses:
 
   utter_iamabot:
   - text: "I am a bot, powered by Rasa."
+
+  action_teams_playing:
+  - text: "The teams playing today are: {teams_playing}"
+  
+  action_current_score:
+  - text: "The current score is {current_score}"
+  
+  action_goal_scorers:
+  - text: "The goal scorers for today's match are: {goal_scorers}"
+  
+  action_match_location:
+  - text: "The match is being played at {match_location}"
+  
+  action_match_date:
+  - text: "The match date is {match_date}"
+  
+  action_match_time:
+  - text: "The match time is {match_time}"
+  
+  action_first_half_goals:
+  - text: "The number of goals scored in the first half is {first_half_goals}"
+  
+  action_second_half_goals:
+  - text: "The number of goals scored in the second half is {second_half_goals}"
+  
+  action_yellow_cards:
+  - text: "The number of yellow cards in the match is {yellow_cards}"
+  
+  action_red_cards:
+  - text: "The number of red cards in the match is {red_cards}"
+
+
 
 session_config:
   session_expiration_time: 60

@@ -28,3 +28,54 @@ stories:
   - action: utter_did_that_help
   - intent: deny
   - action: utter_goodbye
+
+
+- story: teams_playing
+  steps:
+  - intent: teams_playing
+  - action: action_teams_playing
+
+- story: current_score
+  steps:
+  - intent: current_score
+  - action: action_current_score
+
+- story: goal_scorers
+  steps:
+  - intent: goal_scorers
+  - action: action_goal_scorers
+
+- story: match_location
+  steps:
+  - intent: match_location
+  - action: action_match_location
+
+- story: match_date
+  steps:
+  - intent: match_date
+  - action: action_match_date
+
+- story: match_time
+  steps:
+  - intent: match_time
+  - action: action_match_time
+
+- story: first_half_goals
+  steps:
+  - intent: first_half_goals
+  - action: action_first_half_goals
+
+- story: second_half_goals
+  steps:
+  - intent: second_half_goals
+  - action: action_second_half_goals
+
+- story: yellow_cards
+  steps:
+  - intent: yellow_cards
+  - action: action_yellow_cards
+
+- story: red_cards
+  steps:
+  - intent: red_cards
+  - action: action_red_cards

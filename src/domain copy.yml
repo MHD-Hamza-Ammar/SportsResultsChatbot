@@ -1,0 +1,92 @@
+version: "3.1"
+
+intents:
+  - greet
+  - goodbye
+  - affirm
+  - deny
+  - mood_great
+  - mood_unhappy
+  - bot_challenge
+  - teams_playing
+  - current_score
+  - goal_scorers
+  - match_location
+  - match_date
+  - match_time
+  - first_half_goals
+  - second_half_goals
+  - yellow_cards
+  - red_cards
+
+entities:
+  - sport_type
+
+responses:
+  utter_greet:
+  - text: "Hey! How are you?"
+
+  utter_cheer_up:
+  - text: "Here is something to cheer you up:"
+    image: "https://i.imgur.com/nGF1K8f.jpg"
+
+  utter_did_that_help:
+  - text: "Did that help you?"
+
+  utter_happy:
+  - text: "Great, carry on!"
+
+  utter_goodbye:
+  - text: "Bye"
+
+  utter_iamabot:
+  - text: "I am a bot, powered by Rasa."
+
+  utter_teams_playing:
+  - text: "The teams playing today are: {teams_playing}"
+  
+  utter_current_score:
+  - text: "The current score is {current_score}"
+  
+  utter_goal_scorers:
+  - text: "The goal scorers for today's match are: {goal_scorers}"
+  
+  utter_match_location:
+  - text: "The match is being played at {match_location}"
+  
+  utter_match_date:
+  - text: "The match date is {match_date}"
+  
+  utter_match_time:
+  - text: "The match time is {match_time}"
+  
+  utter_first_half_goals:
+  - text: "The number of goals scored in the first half is {first_half_goals}"
+  
+  utter_second_half_goals:
+  - text: "The number of goals scored in the second half is {second_half_goals}"
+  
+  utter_yellow_cards:
+  - text: "The number of yellow cards in the match is {yellow_cards}"
+  
+  utter_red_cards:
+  - text: "The number of red cards in the match is {red_cards}"
+
+actions:
+  - action_get_sports_data
+  - action_iamabot
+  - action_teams_playing
+  - action_current_score
+  - action_goal_scorers
+  - action_match_location
+  - action_match_date
+  - action_match_time
+  - action_first_half_goals
+  - action_second_half_goals
+  - action_yellow_cards
+  - action_red_cards
+
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true

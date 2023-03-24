@@ -89,3 +89,80 @@ nlu:
     - are you a human?
     - am I talking to a bot?
     - am I talking to a human?
+
+- intent: teams_playing
+  examples: |
+    - Which teams are playing today?
+    - Can you tell me the teams playing today?
+    - Who is playing today?
+    - What are the teams playing today?
+    - Give me the names of the teams playing today
+    - What is the match lineup for today?
+
+- intent: current_score
+  examples: |
+    - What is the current score?
+    - Can you tell me the score of the match?
+    - What is the score right now?
+    - How is the match going?
+    - What is the scoreline?
+    - What is the score?
+
+- intent: goal_scorers
+  examples: |
+    - Who scored in the match?
+    - Can you tell me the names of the goal scorers?
+    - Who scored the goals?
+    - What are the names of the players who scored goals?
+    - Who found the back of the net?
+
+- intent: match_location
+  examples: |
+    - Where is the match being played?
+    - What is the location of the match?
+    - Where is the game being held?
+    - What is the stadium for the match?
+
+- intent: match_date
+  examples: |
+    - What is the date of the match?
+    - When is the match happening?
+    - When is the game scheduled?
+    - What is the date for the game?
+
+- intent: match_time
+  examples: |
+    - What is the time of the match?
+    - When does the game start?
+    - What time does the match begin?
+    - When is the kick-off time?
+
+- intent: first_half_goals
+  examples: |
+    - How many goals were scored in the first half?
+    - What is the number of goals in the first half?
+    - What is the scoreline in the first half?
+    - How many goals were scored before the break?
+
+- intent: second_half_goals
+  examples: |
+    - How many goals were scored in the second half?
+    - What is the number of goals in the second half?
+    - What is the scoreline in the second half?
+    - How many goals were scored after the break?
+
+- intent: yellow_cards
+  examples: |
+    - How many yellow cards were shown in the match?
+    - What is the number of yellow cards in the match?
+    - How many players received a yellow card?
+    - What is the number of players with yellow cards?
+
+- intent: red_cards
+  examples: |
+    - How many red cards were shown in the match?
+    - What is the number of red cards in the match?
+    - How many players were sent off?
+    - What is the number of players with red cards?
+
+
