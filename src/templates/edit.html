@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Edit Sports Data</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='edit_page.css') }}">
+</head>
+<body>
+    <h1>Edit Sports Data</h1>
+    <form action="/update" method="post">
+        <input type="hidden" name="id" value="{{ sports_data.id }}">
+        <label for="match">Match:</label>
+        <input type="text" name="match" value="{{ sports_data.Match }}" required><br><br>
+        <label for="score">Score:</label>
+        <input type="text" name="score" value="{{ sports_data.Score }}" required><br><br>
+        <label for="goal_scorers">Goal Scorers:</label>
+        <input type="text" name="goal_scorers" value="{{ sports_data.Goal_Scorers }}" required><br><br>
+        <label for="location">Location:</label>
+        <input type="text" name="location" value="{{ sports_data.Location }}" required><br><br>
+        <label for="date">Date:</label>
+        <input type="text" name="date" value="{{ sports_data.Date }}" required><br><br>
+        <label for="time">Time:</label>
+        <input type="text" name="time" value="{{ sports_data.Time }}" required><br><br>
+        <label for="first_half_goals">First Half Goals:</label>
+        <input type="number" name="first_half_goals" value="{{ sports_data.First_Half_Goals }}" required><br><br>
+        <label for="second_half_goals">Second Half Goals:</label>
+        <input type="number" name="second_half_goals" value="{{ sports_data.Second_Half_Goals }}" required><br><br>
+        <label for="yellow_cards">Yellow Cards:</label>
+        <input type="number" name="yellow_cards" value="{{ sports_data.Yellow_Cards }}" required><br><br>
+        <label for="red_cards">Red Cards:</label>
+        <input type="number" name="red_cards" value="{{ sports_data.Red_Cards }}" required><br><br>
+        <input type="submit" value="Update">
+    </form>
+    <a href="/">Back to Home</a>
+</body>
+</html>

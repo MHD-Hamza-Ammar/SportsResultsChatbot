@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Chatbot</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <script>
+        async function sendMessage(event) {
+            event.preventDefault();
+            const inputElement = document.querySelector('input[name="value1"]');
+            const userMessage = inputElement.value;
+            const chatBox = document.querySelector('.chat-box');
+            chatBox.innerHTML += `<div class="user-message">you: ${userMessage}</div>`;
+
+            inputElement.value = '';
+
+            const response = await fetch('/parse', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({ value1: userMessage }),
+            });
+            const data = await response.json();
+            chatBox.innerHTML += `<div class="bot-message">chatbot: ${data.bot_message}</div>`;
+        }
+    </script>
+</head>
+<body>
+    <h1>Chatbot</h1>
+    <div class="chat-box">
+        {% for message in messages %}
+            {% if message.user %}
+                <div class="user-message">you: {{ message.user }}</div>
+            {% endif %}
+            {% if message.bot %}
+                <div class="bot-message">chatbot: {{ message.bot }}</div>
+            {% endif %}
+        {% endfor %}
+    </div>
+    <form onsubmit="sendMessage(event)">
+        <input type="text" name="value1">
+        <input type="submit" value="Send">
+    </form>
+</body>
+</html>
